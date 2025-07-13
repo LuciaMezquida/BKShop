@@ -3,13 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
-import { ApolloProvider } from '@apollo/client';
-import client from './lib/apollo';
+import { ApolloProvider } from '@apollo/client'
+import client from './lib/apollo'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
       <App />
     </ApolloProvider>
-  </StrictMode>,
+  </StrictMode>
 )

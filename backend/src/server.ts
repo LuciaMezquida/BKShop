@@ -1,9 +1,9 @@
-import express from 'express';
-import { ApolloServer } from '@apollo/server';
-import { expressMiddleware } from '@as-integrations/express4';
-import cors from 'cors';
+import express from 'express'
+import { ApolloServer } from '@apollo/server'
+import { expressMiddleware } from '@as-integrations/express4'
+import cors from 'cors'
 
-const app = express();
+const app = express()
 
 // Tu schema GraphQL básico
 const typeDefs = `#graphql
@@ -22,11 +22,11 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-});
+})
 
 // Inicializa Apollo y aplica el middleware
 async function startServer() {
-  await server.start();
+  await server.start()
 
   app.use(
     '/graphql',
@@ -36,8 +36,8 @@ async function startServer() {
   );
 
   app.listen(4000, () => {
-    console.log('🚀 Servidor listo en http://localhost:4000/graphql');
-  });
+    console.log('🚀 Servidor listo en http://localhost:4000/graphql')
+  })
 }
 
-startServer();
+startServer()
