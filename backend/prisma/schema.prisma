@@ -14,8 +14,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Product {
-  id    Int    @id @default(autoincrement())
-  name  String
-  price Float
+model SnowBoard {
+  id          Int      @id @default(autoincrement())
+  name        String
+  brand       String
+  description String?
+  price       Float
+  size        Int
+  shape       String
+  createdAt   DateTime @default(now())
 }
