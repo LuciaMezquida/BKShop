@@ -1,10 +1,10 @@
-import { productResolvers } from './resolvers/productResolvers'
+import { snowboardResolvers } from './resolvers/snowboardResolvers'
 
 export const resolvers = {
   Query: {
-    ...productResolvers.Query
+    ...snowboardResolvers.Query
   },
   Mutation: {
-    ...productResolvers.Mutation
+    ...snowboardResolvers.Mutation
   }
 }
